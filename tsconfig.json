@@ -18,22 +18,23 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@context/*": ["./src/context/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@types/*": ["./src/localTypes/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@layouts/*": ["./src/layouts/*"]
+      // ... add more aliases as needed. Dont forget to add it to the vite.config as well
+    }
   },
   "include": ["src"],
-  "baseUrl": "./",
-  "paths": {
-    "@components/*": ["src/components/*"],
-    "@pages/*": ["src/pages/*"],
-    "@context/*": ["src/context/*"],
-    "@hooks/*": ["src/hooks/*"],
-    "@utils/*": ["src/utils/*"],
-    "@assets/*": ["src/assets/*"],
-    "@types/*": ["src/localTypes/*"],
-    "@styles/*": ["src/styles/*"],
-    "@routes/*": ["src/routes/*"],
-    "@layouts/*": ["src/layouts/*"]
-    // ... add more aliases as needed. Dont forget to add it to the vite.config as well
-  },
+
+  "rootDir": "./src",
   "references": [{ "path": "./tsconfig.node.json" }]
 }
