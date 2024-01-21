@@ -19,6 +19,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+
     "paths": {
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
@@ -31,10 +33,10 @@
       "@routes/*": ["./src/routes/*"],
       "@layouts/*": ["./src/layouts/*"]
       // ... add more aliases as needed. Dont forget to add it to the vite.config as well
-    }
+    },
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
   "include": ["src"],
-
-  "rootDir": "./src",
   "references": [{ "path": "./tsconfig.node.json" }]
 }
